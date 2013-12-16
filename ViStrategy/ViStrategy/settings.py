@@ -83,7 +83,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '(@zyris!wwlji)rw$amf@2bzk)5rbtq38@)kc5d(e+$o9q$q1l'
+SECRET_KEY = 'p^@kyu4dt3cs2q9ug=g_q+va-&6)lxj(ql(fu+^@urjzr9^!17'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -124,6 +124,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'testViStrategyDB',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
