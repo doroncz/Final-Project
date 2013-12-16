@@ -1,0 +1,38 @@
+strategy:
+
+int strategy (Date start_date, Date end_date, int window_size, int beginning_amount){
+	double avg_value, today_value;
+	int current_amount = beginning_amount;
+
+	for (int start_window = start_date; start_window + window_size < end_date; start_window++){
+		Date end_window = start_window + window_size;
+		avg_value = Sliding_window_value(start_window, end_window);
+		today_value = get_base_value(end_window);
+		
+		// buy stock
+		if (avg_value > today_value) {
+			if (current_amount > today_value) // has enough money to buy stock
+				current_amount = current_amount - today_value; 
+		}
+
+		// sell stock
+		else if (avg_value < today_value){
+			current_amount = current_amount + today_value; 
+		}
+	}
+
+	return current_amount;
+}
+
+double Sliding_window_value(Date start_window, Date end_window){
+	SELECT AVG(base_value)
+	FROM Stocks_Table
+	WHERE date BETWEEN start_window AND end_window
+}
+
+double get_base_value(Date end_window){
+	SELECT base_value
+	FROM Stocks_Table
+	WHERE date = end_window
+}
+
