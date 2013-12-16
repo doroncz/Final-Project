@@ -32,9 +32,9 @@ Blockly.Blocks['math_number'] = {
   // Numeric value.
   init: function() {
     this.setHelpUrl(Blockly.Msg.MATH_NUMBER_HELPURL);
-    this.setColour(230);
+    this.setColour(0);
     this.appendDummyInput()
-        .appendTitle(new Blockly.FieldTextInput('0',
+        .appendTitle(new Blockly.FieldTextInput('4',
         Blockly.FieldTextInput.numberValidator), 'NUM');
     this.setOutput(true, 'Number');
     this.setTooltip(Blockly.Msg.MATH_NUMBER_TOOLTIP);
