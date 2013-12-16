@@ -8,3 +8,4 @@ class Stock(models.Model):
 	high_value = models.FloatField(default=0)
 	low_value = models.FloatField(default=0)
 	overall_market_value = models.FloatField(default=0)
+	
