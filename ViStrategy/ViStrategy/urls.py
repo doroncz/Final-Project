@@ -16,5 +16,8 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^slide/(\w+)$', slide_window)
+    url(r'^slide/(\w+)$', slide_window),
+    # url(r'^polls/', include('polls.urls')),
+
+    url(r'^testViStrategyDB/', include('testViStrategyDB.urls')),
 )
