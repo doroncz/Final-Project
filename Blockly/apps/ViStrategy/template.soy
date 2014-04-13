@@ -27,6 +27,7 @@
  */
 {template .start}
   {call .messages /}
+  <script type="text/javascript" src="newblocks.js"></script>
   <script type="text/javascript" src="../../blockly_compressed.js"></script>
   <script type="text/javascript" src="../../blocks_compressed.js"></script>
   <script type="text/javascript" src="../../javascript_compressed.js"></script>
@@ -261,10 +262,20 @@
     <category name="{msg meaning="Apps.catVariables" desc="IBID"}Variables{/msg}" custom="VARIABLE"></category>
     <category name="{msg meaning="Apps.catProcedures" desc="IBID"}Procedures{/msg}" custom="PROCEDURE"></category>
 	
-	<category name="ViStrategy functions">
-      <block type="slide"></block>
+	<category name="Stock value functions">
+    
+	  <block type="stock_value"></block>
+	  <block type="stock_minimum_value"></block>
+	  <block type="stock_maximum_value"></block>
+	  <block type="stock_average_value"></block>
+	  
     </category>
 	
+	<category name="ViStrategy functions">
+		  <block type="slide"></block>
+		  <block type="buy_stock"></block>
+		  <block type="sell_stock"></block>
+	</category>
   </xml>
 {/template}
 
